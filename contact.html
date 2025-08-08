@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav>
+        <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+    <span>Contact Us</span>
+</nav>
+<h4 class="typewriter"> Fill the below form and get it touch with us . <br> We are here to guide you all throughout your coding projects.</h4>
+<form class="fill" method="post"  onsubmit="return validateCheckbox()">
+    <fieldset>
+        <legend>Login Here</legend>
+        Name:<input type="text" name="txt" size="20" maxlength="30"><br>
+        Subject:<input type="text" name="txt.2" size="20" maxlength="30"><br>
+        Email:<input type="text" name="txt.3" size="20" maxlength="30"><br>
+       Message:<input type="text" name="txt.4" size="20" maxlength="60"><br>
+       <input type="submit" value="Ok"> 
+       <input type="reset" value="Clear">
+     
+    </fieldset>
+
+</form>
+<script>
+    function validateForm() {
+      let name = document.forms["loginForm"]["txt"].value;
+      let subject = document.forms["loginForm"]["txt.2"].value;
+      let email = document.forms["loginForm"]["txt.3"].value;
+      let message = document.forms["loginForm"]["txt.4"].value;
+  
+      if (name === "" || subject === "" || email === "" || message === "") {
+        alert("All fields must be filled out");
+        return false;
+      }
+  
+      if (!email.includes("@")) {
+        alert("Please enter a valid email address");
+        return false;
+      }
+  
+      return true;
+    }
+  </script>
+  <script>
+  function validateCheckbox() {
+    if (!document.getElementById("agree").checked) {
+      alert("You must fill the form .");
+      return false;
+    }
+    return true;
+  }
+</script>
+<script>
+  function showMessage() {
+    alert("Form submitted successfully!");
+    return false;
+  }
+</script>
+
+
+
+</body>
+</html>
